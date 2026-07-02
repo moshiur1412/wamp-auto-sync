@@ -59,8 +59,14 @@ Models::SyncResult SyncService::Sync() {
     }
     
     if (!mysqlDir.empty()) {
-        pathManager.AddToPath(mysqlDir);
-        result.PathsAdded.push_back(mysqlDir);
+        auto mysqlBin = std::filesystem::path(mysqlDir) / L"bin";
+        if (std::filesystem::exists(mysqlBin)) {
+            pathManager.AddToPath(mysqlBin.wstring());
+            result.PathsAdded.push_back(mysqlBin.wstring());
+        } else {
+            pathManager.AddToPath(mysqlDir);
+            result.PathsAdded.push_back(mysqlDir);
+        }
     }
     
     broadcaster.Broadcast();

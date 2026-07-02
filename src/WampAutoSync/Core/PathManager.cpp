@@ -137,8 +137,14 @@ std::vector<std::wstring> PathManager::GetWampPaths(const std::wstring& wampPath
     std::filesystem::path mysqlRoot = std::filesystem::path(wampPath) / L"bin" / L"mysql";
     if (std::filesystem::exists(mysqlRoot)) {
         for (const auto& entry : std::filesystem::directory_iterator(mysqlRoot)) {
-            if (entry.is_directory() && std::filesystem::exists(entry.path() / L"mysql.exe")) {
-                paths.push_back(entry.path().wstring());
+            if (entry.is_directory()) {
+                if (std::filesystem::exists(entry.path() / L"mysql.exe")) {
+                    paths.push_back(entry.path().wstring());
+                }
+                auto binDir = entry.path() / L"bin";
+                if (std::filesystem::exists(binDir) && std::filesystem::exists(binDir / L"mysql.exe")) {
+                    paths.push_back(entry.path().wstring());
+                }
             }
         }
     }
