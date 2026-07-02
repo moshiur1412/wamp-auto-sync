@@ -1,0 +1,54 @@
+# Build outputs
+x64/
+Debug/
+Release/
+*.exe
+*.dll
+*.lib
+*.pdb
+*.ilk
+*.obj
+*.iobj
+*.ipdb
+*.exp
+*.log
+*.tlog
+*.lastbuildstate
+*.FileListAbsolute.txt
+*.unsuccessfulbuild
+*.manifest
+*.res
+*.pch
+*.ipch
+*.suo
+*.user
+*.ncb
+*.sdf
+*.opensdf
+*.db
+*.opendb
+
+# Visual Studio
+.vs/
+*.VC.db
+*.VC.VC.opendb
+ipch/
+Browse.VC.db
+Browse.VC.opendb
+
+# NuGet
+packages/
+
+# Build directories
+build/
+out/
+
+# Temp
+*.tmp
+*.temp
+~$*
+
+# OS
+Thumbs.db
+Desktop.ini
+.DS_Store
