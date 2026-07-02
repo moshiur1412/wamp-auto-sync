@@ -2,11 +2,12 @@
 
 > Automatically sync CLI PHP, MySQL, Composer and related tools with the active WampServer version.
 
-[![Release](https://img.shields.io/badge/Release-v1.0.0-blue.svg)](https://github.com/yourusername/wamp-auto-sync/releases/tag/v1.0.0)
-[![Build](https://img.shields.io/badge/Build-Passing-brightgreen.svg)](https://github.com/yourusername/wamp-auto-sync/actions)
+[![Release](https://img.shields.io/badge/Release-v1.0.0-blue.svg)](https://github.com/moshiur1412/wamp-auto-sync/releases/tag/v1.0.0)
+[![Build](https://img.shields.io/badge/Build-Passing-brightgreen.svg)](https://github.com/moshiur1412/wamp-auto-sync/actions)
 [![Platform](https://img.shields.io/badge/Platform-Windows%2010%2F11-lightgrey.svg)]()
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![C++](https://img.shields.io/badge/C++-20-blue.svg)]()
+[![Wiki](https://img.shields.io/badge/Wiki-Available-brightgreen.svg)](https://github.com/moshiur1412/wamp-auto-sync/wiki)
 
 ---
 
@@ -14,7 +15,7 @@
 
 ### Download
 
-Download the latest release: **[WampAutoSync.exe](https://github.com/yourusername/wamp-auto-sync/releases/download/v1.0.0/WampAutoSync.exe)**
+Download the latest release: **[WampAutoSync.exe](https://github.com/moshiur1412/wamp-auto-sync/releases/download/v1.0.0/WampAutoSync.exe)**
 
 ### Install
 
@@ -430,8 +431,9 @@ Built for developers who regularly switch PHP and MySQL versions in WampServer a
 
 ## Support
 
-- [GitHub Issues](https://github.com/yourusername/wamp-auto-sync/issues)
-- [Documentation](https://github.com/yourusername/wamp-auto-sync#readme)
+- [GitHub Issues](https://github.com/moshiur1412/wamp-auto-sync/issues)
+- [GitHub Wiki](https://github.com/moshiur1412/wamp-auto-sync/wiki)
+- [Documentation](https://github.com/moshiur1412/wamp-auto-sync#readme)
 
 ---
 
