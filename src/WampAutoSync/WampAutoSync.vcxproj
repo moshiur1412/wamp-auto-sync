@@ -93,6 +93,7 @@
     <ClInclude Include="..\..\include\Models\MySqlVersion.h" />
     <ClInclude Include="..\..\include\Models\SyncResult.h" />
     <ClInclude Include="..\..\include\Tray\TrayIcon.h" />
+    <ClInclude Include="resource.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
@@ -107,6 +108,7 @@
     <ClCompile Include="Helpers\LogHelper.cpp" />
     <ClCompile Include="Helpers\StartupHelper.cpp" />
     <ClCompile Include="Tray\TrayIcon.cpp" />
+    <ResourceCompile Include="WampAutoSync.rc" />
   </ItemGroup>
   <ItemGroup>
     <None Include="appsettings.json">

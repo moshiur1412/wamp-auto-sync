@@ -1,6 +1,7 @@
 #include "Tray/TrayIcon.h"
 #include <shellapi.h>
 #include <commctrl.h>
+#include "../resource.h"
 
 #pragma comment(lib, "comctl32.lib")
 
@@ -18,7 +19,7 @@ void TrayIcon::Create() {
     wc.lpfnWndProc = WndProc;
     wc.hInstance = m_hInstance;
     wc.lpszClassName = L"WampAutoSyncTray";
-    wc.hIcon = LoadIcon(nullptr, IDI_APPLICATION);
+    wc.hIcon = LoadIcon(m_hInstance, MAKEINTRESOURCE(IDI_APPICON));
     
     RegisterClassExW(&wc);
     
@@ -49,7 +50,7 @@ void TrayIcon::Create() {
     m_nid.uID = 1;
     m_nid.uFlags = NIF_ICON | NIF_MESSAGE | NIF_TIP;
     m_nid.uCallbackMessage = WM_TRAYICON;
-    m_nid.hIcon = LoadIcon(nullptr, IDI_APPLICATION);
+    m_nid.hIcon = LoadIcon(m_hInstance, MAKEINTRESOURCE(IDI_APPICON));
     wcscpy_s(m_nid.szTip, L"Wamp Auto Sync");
     
     Shell_NotifyIconW(NIM_ADD, &m_nid);
