@@ -1,6 +1,18 @@
-# Wamp Auto Sync (WAS)
+# Wamp Auto Sync (WAS) v1.0.0
 
 > Automatically sync CLI PHP, MySQL, Composer and related tools with the active WampServer version.
+
+[![Release](https://img.shields.io/badge/Release-v1.0.0-blue.svg)](https://github.com/yourusername/wamp-auto-sync/releases/tag/v1.0.0)
+[![Platform](https://img.shields.io/badge/Platform-Windows%2010%2F11-lightgrey.svg)]()
+[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+
+---
+
+## Download
+
+Download the latest release: [v1.0.0](https://github.com/yourusername/wamp-auto-sync/releases/tag/v1.0.0)
+
+**WampAutoSync.exe** - Single file, no installation required. Just double-click to run.
 
 ---
 
@@ -109,7 +121,7 @@ Done
 ```text
 WampAutoSync/
 │
-├── include/
+├── include/                 # C++ headers
 │   ├── Core/
 │   │   ├── ConfigParser.h
 │   │   ├── PathManager.h
@@ -168,8 +180,10 @@ WampAutoSync/
 │   └── workflows/
 │       └── build.yml
 │
+├── .gitignore
 ├── LICENSE
 ├── README.md
+├── SKILL.md
 └── WampAutoSync.sln
 ```
 
