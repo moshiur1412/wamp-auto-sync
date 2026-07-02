@@ -17,14 +17,8 @@ jobs:
     - name: Setup MSBuild
       uses: microsoft/setup-msbuild@v2
 
-    - name: Add MSBuild to PATH
-      uses: actions/setup-dotnet@v4
-      with:
-        dotnet-version: '8.0.x'
-
     - name: Build Release
-      run: |
-        & "C:\Program Files\Microsoft Visual Studio\2022\Enterprise\MSBuild\Current\Bin\MSBuild.exe" WampAutoSync.sln /p:Configuration=Release /p:Platform=x64
+      run: msbuild WampAutoSync.sln /p:Configuration=Release /p:Platform=x64
 
     - name: Upload Build Artifact
       uses: actions/upload-artifact@v4
