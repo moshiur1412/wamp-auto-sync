@@ -65,6 +65,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Links
 
-- [GitHub Repository](https://github.com/yourusername/wamp-auto-sync)
-- [Release Page](https://github.com/yourusername/wamp-auto-sync/releases)
-- [Issues](https://github.com/yourusername/wamp-auto-sync/issues)
+- [GitHub Repository](https://github.com/moshiur1412/wamp-auto-sync)
+- [Release Page](https://github.com/moshiur1412/wamp-auto-sync/releases)
+- [Issues](https://github.com/moshiur1412/wamp-auto-sync/issues)

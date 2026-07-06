@@ -19,6 +19,8 @@ public:
     [[nodiscard]] HWND GetHwnd() const { return m_hwnd; }
     void SetSyncCallback(std::function<void()> callback) { m_syncCallback = std::move(callback); }
     void SetExitCallback(std::function<void()> callback) { m_exitCallback = std::move(callback); }
+    void SetAutoStartCallback(std::function<void()> callback) { m_autoStartCallback = std::move(callback); }
+    void UpdateAutoStartMenu(bool enabled);
 
 private:
     static LRESULT CALLBACK WndProc(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lParam);
@@ -39,6 +41,7 @@ private:
 
     std::function<void()> m_syncCallback;
     std::function<void()> m_exitCallback;
+    std::function<void()> m_autoStartCallback;
 
     static inline TrayIcon* s_instance = nullptr;
 };

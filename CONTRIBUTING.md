@@ -50,7 +50,7 @@ Thank you for your interest in contributing to WampAutoSync! This document provi
 ### Build
 
 ```bat
-git clone https://github.com/yourusername/wamp-auto-sync.git
+git clone https://github.com/moshiur1412/wamp-auto-sync.git
 cd wamp-auto-sync
 msbuild WampAutoSync.sln /p:Configuration=Release /p:Platform=x64
 ```

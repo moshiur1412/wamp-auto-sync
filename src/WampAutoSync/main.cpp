@@ -94,6 +94,9 @@ void OnToggleAutoStart() {
     } else {
         WampAutoSync::Helpers::StartupHelper::EnableAutoStart();
     }
+    if (g_trayIcon) {
+        g_trayIcon->UpdateAutoStartMenu(WampAutoSync::Helpers::StartupHelper::IsAutoStartEnabled());
+    }
 }
 
 int WINAPI wWinMain(HINSTANCE hInstance, HINSTANCE, LPWSTR, int) {
@@ -113,7 +116,13 @@ int WINAPI wWinMain(HINSTANCE hInstance, HINSTANCE, LPWSTR, int) {
         if (g_watcher) g_watcher->StopWatching();
         PostQuitMessage(0);
     });
+    g_trayIcon->SetAutoStartCallback(OnToggleAutoStart);
     g_trayIcon->Create();
+    
+    if (!WampAutoSync::Helpers::StartupHelper::IsAutoStartEnabled()) {
+        WampAutoSync::Helpers::StartupHelper::EnableAutoStart();
+    }
+    g_trayIcon->UpdateAutoStartMenu(WampAutoSync::Helpers::StartupHelper::IsAutoStartEnabled());
     
     g_trayIcon->ShowNotification(
         L"Wamp Auto Sync",

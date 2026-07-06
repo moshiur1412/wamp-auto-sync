@@ -2,7 +2,7 @@
 
 > Automatically sync CLI PHP, MySQL, Composer and related tools with the active WampServer version.
 
-[![Release](https://img.shields.io/badge/Release-v1.0.0-blue.svg)](https://github.com/moshiur1412/wamp-auto-sync/releases/tag/v1.0.0)
+[![Release](https://img.shields.io/github/v/release/moshiur1412/wamp-auto-sync?label=Release&color=blue)](https://github.com/moshiur1412/wamp-auto-sync/releases)
 [![Build](https://img.shields.io/badge/Build-Passing-brightgreen.svg)](https://github.com/moshiur1412/wamp-auto-sync/actions)
 [![Platform](https://img.shields.io/badge/Platform-Windows%2010%2F11-lightgrey.svg)]()
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
@@ -15,7 +15,7 @@
 
 ### Download
 
-Download the latest release: **[WampAutoSync.exe](https://github.com/moshiur1412/wamp-auto-sync/releases/download/v1.0.0/WampAutoSync.exe)**
+Download the latest release from **[GitHub Releases](https://github.com/moshiur1412/wamp-auto-sync/releases)**
 
 ### Install
 
@@ -124,7 +124,7 @@ Done - New terminal works
 
 ### Option 1: Portable (Recommended)
 
-1. Download `WampAutoSync.exe` from [Releases](https://github.com/yourusername/wamp-auto-sync/releases)
+1. Download `WampAutoSync.exe` from [Releases](https://github.com/moshiur1412/wamp-auto-sync/releases)
 2. Create folder `C:\Tools\WampAutoSync\`
 3. Move `WampAutoSync.exe` to that folder
 4. Double-click to run
@@ -140,7 +140,7 @@ Done - New terminal works
 ### Option 3: Build from Source
 
 ```bat
-git clone https://github.com/yourusername/wamp-auto-sync.git
+git clone https://github.com/moshiur1412/wamp-auto-sync.git
 cd wamp-auto-sync
 msbuild WampAutoSync.sln /p:Configuration=Release /p:Platform=x64
 ```

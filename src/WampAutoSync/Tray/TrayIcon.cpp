@@ -148,13 +148,20 @@ void TrayIcon::OnCommand(UINT commandId) {
         break;
         
     case ID_TRAY_AUTO_START:
-        // Toggle auto start
+        if (m_autoStartCallback) m_autoStartCallback();
         break;
     }
 }
 
 void TrayIcon::OnTaskbarCreated() {
     Shell_NotifyIconW(NIM_ADD, &m_nid);
+}
+
+void TrayIcon::UpdateAutoStartMenu(bool enabled) {
+    if (m_hMenu) {
+        CheckMenuItem(m_hMenu, ID_TRAY_AUTO_START,
+            MF_BYCOMMAND | (enabled ? MF_CHECKED : MF_UNCHECKED));
+    }
 }
 
 }
