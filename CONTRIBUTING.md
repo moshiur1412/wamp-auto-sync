@@ -60,7 +60,7 @@ msbuild WampAutoSync.sln /p:Configuration=Release /p:Platform=x64
 ```
 include/          Header files
 src/WampAutoSync/ Source files
-installer/        Installation scripts
+installer/        PowerShell scripts
 ```
 
 ## Coding Standards

@@ -5,7 +5,7 @@ All notable changes to WampAutoSync will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [1.0.0] - 2026-07-02
+## [1.0.0] - 2026-07-06
 
 ### Added
 
@@ -19,8 +19,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Static linking (`/MT`) - no VC++ Redistributable needed
 - Custom application icon (blue circle with "W")
 - Version info embedded in executable
-- Auto start on Windows login option
+- Auto start on Windows login (enabled by default with checkmark indicator)
 - Notification balloon for sync status
+
+### Fixed
+
+- Auto start not working after computer restart (registers exe in registry on startup)
+- Auto start tray menu now shows checkmark when enabled
+- README download link broken (now points to GitHub Releases page)
+- README/CHANGELOG/CONTRIBUTING had placeholder `yourusername` instead of `moshiur1412`
 
 ### Features
 

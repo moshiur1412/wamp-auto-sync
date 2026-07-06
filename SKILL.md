@@ -26,7 +26,7 @@ Output: `x64\Release\WampAutoSync.exe`
 ```
 include/          Headers
 src/WampAutoSync/ Source files and .vcxproj
-installer/        Inno Setup script
+installer/        PowerShell scripts (install, uninstall, startup, reset-path)
 ```
 
 ## Key Files
@@ -82,18 +82,25 @@ Do NOT use `SetEnvironmentVariableW` alone - it only affects the current process
 
 ## Tray Menu Commands
 
+- ID 1001: Exit
 - ID 1002: Sync Now
 - ID 1003: Show Active PHP
 - ID 1004: Show Active MySQL
-- ID 1005: Toggle Auto Start
-- ID 1006: Exit
+- ID 1005: Toggle Auto Start (with checkmark indicator)
 
 ## Registry Keys
 
 ```
-HKCU\Environment\Path          - User PATH
+HKCU\Environment\Path                                           - User PATH
 HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Run\WampAutoSync - Auto start
 ```
+
+## Auto Start Behavior
+
+- Enabled by default on first run (registers exe in `HKCU\...\Run`)
+- Tray menu shows checkmark when enabled
+- Toggle via right-click menu "Auto Start" item
+- Uses `GetModuleFileNameW()` to get current exe path for registry entry
 
 ## Testing Checklist
 
